@@ -17,15 +17,16 @@
 
 ### 環境構築
 
-KaliLinux及びMetasploitable2のインスタンスを作成し，通信を確認せよ
+1. KaliLinux及びMetasploitable2のインスタンスを作成し，通信を確認せよ
+2. KaliLinux上のGitアカウント(user.name, user.email)を設定せよ
 
-### Git
+### 試験開始
 
-1. KaliLinux上のGitアカウント(user.name, user.email)を設定せよ
-2. [試験問題](https://github.com/omas-public/exam20201125)をKali上でCloneせよ
-3. *学籍番号名のブランチを作成せよ
-4. 上記ブランチにて answersheet.md を *学籍番号.md という名称でCopyせよ
-5. examsheet.md を参照し回答を answersheet.md に記入せよ
+1. [試験問題](https://github.com/omas-public/exam20201125)をKali上でCloneせよ
+2. *学籍番号名のブランチを作成せよ
+3. 上記ブランチにて answersheet.md を *学籍番号.md という名称でCopyせよ
+4. examsheet.md を参照し回答を *学籍番号.md に記入せよ
+5. 回答が終了したら *学籍番号.mdをステージしてコミットせよ
 6. ```git push origin 学籍番号``` を用いてGithubにPushせよ
 7. Github上に回答が正しく提出できたか確認せよ
 
